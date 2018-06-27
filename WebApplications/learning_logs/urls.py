@@ -7,4 +7,6 @@ urlpatterns = [
   # url(r'^$', views.index, name = "index")
   path(r'', index, name = "index")
   # path(r'^$', index, name = "index")
+  #   Show all topics
+  path(r'^topics/$', topics, name = "topics"),
 ]
