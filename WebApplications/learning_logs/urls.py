@@ -1,7 +1,10 @@
 """Defines URL patterns for learning_logs"""
-from django.conf.urls import url
-from . import views
+from django.urls import path
+# from . import views as learning_logs_views
+from learning_logs.views import index
 urlpatterns = [
   #   Home page
-  url(r'^$', views.index, name = "index")
+  # url(r'^$', views.index, name = "index")
+  path(r'', index, name = "index")
+  # path(r'^$', index, name = "index")
 ]
