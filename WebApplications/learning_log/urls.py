@@ -24,7 +24,7 @@ from django.urls import include
 urlpatterns = [
   path('admin/', admin.site.urls),
   # url(r"", include('learning_logs.urls', namespace = "learning_logs")),
-  path(r"", include('learning_logs.urls')),
+  path('', include('learning_logs.urls')),
   # path("", urls, name = "learning_logs")
   # path("", learning_logs.urls, name = "learning_logs")
   # path("", learning_logs_urls, name = "learning_logs")
