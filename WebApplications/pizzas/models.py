@@ -15,7 +15,7 @@ class Topping(models.Model) :
   name = models.TextField()
   date_added = models.DateTimeField(auto_now_add = True)
   class Meta :
-    verbose_name_plural = "topping"
+    verbose_name_plural = "toppings"
   def __str__(self) :
     """return a string representation of the topping"""
     return self.name
