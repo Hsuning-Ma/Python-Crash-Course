@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from django.contrib.auth.views import logout, login, authenticate
+from django.contrib.auth.views import logout, login
+from django.contrib.auth import authenticate
 from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
@@ -14,10 +15,10 @@ def register(request) :
   """Register a new user"""
   if request.method!="POST" :
     #   Display blank registration form
-    from = UserCreationForm()
+    form = UserCreationForm()
   else :
     #   Process completed form
-    from = UserCreationForm(data = request.POST)
+    form = UserCreationForm(data = request.POST)
     if form.is_valid() :
       new_user = form.save()
       #   Log the user in and then redirect to home page
