@@ -124,7 +124,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+#   My settings
 #   Set template location
 TEMPLATE_DIRS = (
   BASE_DIR + "/templates/",
 )
+
+LOGIN_URL = '/users/login/'
