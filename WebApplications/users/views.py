@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from django.contrib.auth.views import logout, login
+from django.contrib.auth.views import logout, login#, authenticate
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import UserCreationForm
 
@@ -27,4 +27,4 @@ def register(request) :
       login(request, authenticated_user)
       return HttpResponseRedirect(reverse('learning_logs:index'))
   context = {'form': form}
-  return render(render, 'users/register.html', context)
+  return render(request, 'users/register.html', context)
